@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24053.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -399,21 +400,52 @@ social media</string>
             </objects>
             <point key="canvasLocation" x="249" y="137"/>
         </scene>
-        <!--Shop-->
+        <!--Home View Controller-->
         <scene sceneID="Fv8-If-PB4">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="e5D-0N-8W6" customClass="HomeViewController" customModule="FakeStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="505-1a-eii">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UD6-ig-VzT">
+                                <rect key="frame" x="0.0" y="178" width="402" height="579"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mtq-YQ-nbS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nP2-tx-1hw">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9pS-f5-qZr">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R35-je-u2v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R35-je-u2v" firstAttribute="trailing" secondItem="UD6-ig-VzT" secondAttribute="trailing" id="2sE-yn-4LO"/>
+                            <constraint firstItem="UD6-ig-VzT" firstAttribute="top" secondItem="R35-je-u2v" secondAttribute="top" id="HEN-g2-KOf"/>
+                            <constraint firstItem="R35-je-u2v" firstAttribute="bottom" secondItem="UD6-ig-VzT" secondAttribute="bottom" id="NDF-XG-SIU"/>
+                            <constraint firstItem="UD6-ig-VzT" firstAttribute="leading" secondItem="R35-je-u2v" secondAttribute="leading" id="pQp-9Z-bc8"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shop" image="house" catalog="system" id="m4j-OR-BUe"/>
+                    <navigationItem key="navigationItem" id="IUg-wv-SDT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="UD6-ig-VzT" id="P3L-Ut-tnR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="811-ph-A1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="816"/>
+            <point key="canvasLocation" x="1058.2089552238806" y="1211.6704805491991"/>
         </scene>
         <!--Explore-->
         <scene sceneID="0YJ-b5-jQS">
@@ -429,7 +461,7 @@ social media</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVs-cw-Aa5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="816"/>
+            <point key="canvasLocation" x="1982.0895522388059" y="815.56064073226537"/>
         </scene>
         <!--Account-->
         <scene sceneID="1V4-JU-t8o">
@@ -445,7 +477,7 @@ social media</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTN-AP-Tq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3510" y="816"/>
+            <point key="canvasLocation" x="4428.3582089552237" y="815.56064073226537"/>
         </scene>
         <!--Cart-->
         <scene sceneID="8Fi-ey-AJB">
@@ -461,7 +493,7 @@ social media</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNC-hA-o3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1899" y="816"/>
+            <point key="canvasLocation" x="2817.9104477611941" y="815.56064073226537"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tzt-M9-e7e">
@@ -474,7 +506,7 @@ social media</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="e5D-0N-8W6" kind="relationship" relationship="viewControllers" id="iXQ-BW-ReK"/>
+                        <segue destination="hdA-WG-stt" kind="relationship" relationship="viewControllers" id="iXQ-BW-ReK"/>
                         <segue destination="DSJ-w7-HTk" kind="relationship" relationship="viewControllers" id="HRP-za-RTe"/>
                         <segue destination="xeF-3v-GRw" kind="relationship" relationship="viewControllers" id="PZp-W5-lxp"/>
                         <segue destination="lDV-aY-zVM" kind="relationship" relationship="viewControllers" id="h8Q-1e-cCX"/>
@@ -499,7 +531,26 @@ social media</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCM-JI-Dsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704" y="816"/>
+            <point key="canvasLocation" x="3622.3880597014922" y="815.56064073226537"/>
+        </scene>
+        <!--Shop-->
+        <scene sceneID="9SD-5z-jSh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hdA-WG-stt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shop" image="house" catalog="system" id="m4j-OR-BUe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vmk-zD-aS6">
+                        <rect key="frame" x="0.0" y="124" width="402" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e5D-0N-8W6" kind="relationship" relationship="rootViewController" id="tnY-Nt-pw1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPo-82-2Hq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.80597014925371" y="1211.6704805491991"/>
         </scene>
     </scenes>
     <resources>
@@ -513,7 +564,7 @@ social media</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

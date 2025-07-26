@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4705511B2E34E387000C4526 /* BannerCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4705511A2E34E387000C4526 /* BannerCVCell.xib */; };
+		4705511C2E34E387000C4526 /* BannerCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470551192E34E387000C4526 /* BannerCVCell.swift */; };
 		4708F5012E349D02007E45B1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4708F5002E349D02007E45B1 /* FavoriteViewController.swift */; };
 		4708F5032E349D0E007E45B1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4708F5022E349D0E007E45B1 /* AccountViewController.swift */; };
 		4717C9322E2CF13E004F06FF /* Alert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717C9312E2CF132004F06FF /* Alert+Extensions.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		470551192E34E387000C4526 /* BannerCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCVCell.swift; sourceTree = "<group>"; };
+		4705511A2E34E387000C4526 /* BannerCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCVCell.xib; sourceTree = "<group>"; };
 		4708F5002E349D02007E45B1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		4708F5022E349D0E007E45B1 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4717C9312E2CF132004F06FF /* Alert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extensions.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				472A11CE2E2CC3310066204D /* Register */,
 				4717C9342E2D0887004F06FF /* Network */,
 				4717C9302E2CF10B004F06FF /* Extensions */,
+				470551192E34E387000C4526 /* BannerCVCell.swift */,
+				4705511A2E34E387000C4526 /* BannerCVCell.xib */,
 			);
 			path = FakeStoreDemo;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4705511B2E34E387000C4526 /* BannerCVCell.xib in Resources */,
 				472A11C52E2CC0000066204D /* Main.storyboard in Resources */,
 				472A11B12E2B7B520066204D /* Assets.xcassets in Resources */,
 				472A11B32E2B7B520066204D /* LaunchScreen.storyboard in Resources */,
@@ -227,6 +234,7 @@
 				472A11C32E2CC0000066204D /* RegisterViewController.swift in Sources */,
 				4717C93A2E3497A8004F06FF /* ExploreViewController.swift in Sources */,
 				472A11C42E2CC0000066204D /* SignInViewController.swift in Sources */,
+				4705511C2E34E387000C4526 /* BannerCVCell.swift in Sources */,
 				472A11AF2E2B7B520066204D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
