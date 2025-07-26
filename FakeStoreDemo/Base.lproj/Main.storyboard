@@ -141,6 +141,9 @@ social media</string>
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Tt-GF-NcG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmk-70-2Nw">
                                                 <rect key="frame" x="0.0" y="70" width="354" height="50"/>
@@ -396,24 +399,116 @@ social media</string>
             </objects>
             <point key="canvasLocation" x="249" y="137"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Shop-->
         <scene sceneID="Fv8-If-PB4">
             <objects>
-                <viewController id="e5D-0N-8W6" customClass="HomeViewController" customModule="FakeStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="e5D-0N-8W6" customClass="HomeViewController" customModule="FakeStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="505-1a-eii">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="R35-je-u2v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Shop" image="house" catalog="system" id="m4j-OR-BUe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="811-ph-A1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="869"/>
+            <point key="canvasLocation" x="248" y="816"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="0YJ-b5-jQS">
+            <objects>
+                <viewController id="DSJ-w7-HTk" customClass="ExploreViewController" customModule="FakeStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4sL-Fd-0Gt">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qHI-UY-Ayu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="mJ4-q7-MWz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVs-cw-Aa5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="816"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="1V4-JU-t8o">
+            <objects>
+                <viewController id="6WO-mb-gWb" customClass="AccountViewController" customModule="FakeStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bAz-eO-5b4">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="T6z-fC-iIm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" id="7XV-LL-oPX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTN-AP-Tq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3510" y="816"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="8Fi-ey-AJB">
+            <objects>
+                <viewController id="xeF-3v-GRw" customClass="CartViewController" customModule="FakeStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Tf-jn-iMC">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e2T-sY-Z3P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart" catalog="system" id="Wuf-VN-AE5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNC-hA-o3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1899" y="816"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tzt-M9-e7e">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="9ID-PP-uWr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FQw-jz-F4k">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e5D-0N-8W6" kind="relationship" relationship="viewControllers" id="iXQ-BW-ReK"/>
+                        <segue destination="DSJ-w7-HTk" kind="relationship" relationship="viewControllers" id="HRP-za-RTe"/>
+                        <segue destination="xeF-3v-GRw" kind="relationship" relationship="viewControllers" id="PZp-W5-lxp"/>
+                        <segue destination="lDV-aY-zVM" kind="relationship" relationship="viewControllers" id="h8Q-1e-cCX"/>
+                        <segue destination="6WO-mb-gWb" kind="relationship" relationship="viewControllers" id="wA2-zF-UJ9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5y3-bC-Gc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="816"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="yOW-Bn-Y1f">
+            <objects>
+                <viewController id="lDV-aY-zVM" customClass="FavoriteViewController" customModule="FakeStoreDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNq-O1-xNN">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fbj-69-Z9i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="heart" catalog="system" id="iFx-40-mKG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCM-JI-Dsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704" y="816"/>
         </scene>
     </scenes>
     <resources>
         <image name="GoogleLogo" width="22" height="22"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
